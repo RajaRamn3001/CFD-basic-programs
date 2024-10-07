@@ -75,8 +75,7 @@ double **ADI_method(double **T,int m,int n,double b_x1,double b_x2,double b_x3,d
          {double T_old=T[i][k]; 
            T[i][k]=C_x[k-1];
            T[i][k]=T_old-w*(T_old-T[i][k]);
-          //double residue=T[i][k]*2*(1+pow(s,2))-pow(s,2)*T[i][k+1]-pow(s,2)*T[i][k-1]- T[i+1][k]-T[i-1][k]; 
-    // residue_sqr_sum+=pow(residue,2);
+          
          }    
          i++;
          flag=1;
@@ -88,8 +87,7 @@ double **ADI_method(double **T,int m,int n,double b_x1,double b_x2,double b_x3,d
          {double T_old=T[k][j]; 
            T[k][j]=C_y[k-1];
            T[k][j]=T_old-w*(T_old-T[k][j]);
-          //double residue=T[k][j]*2*(1+pow(s,2))-pow(s,2)*T[k][j+1]-pow(s,2)*T[k][j-1]- T[k+1][j]-T[k-1][j]; 
-     //residue_sqr_sum+=pow(residue,2);
+          
          }    
          j++;
          flag=0;
